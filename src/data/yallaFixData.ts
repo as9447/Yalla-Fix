@@ -17,7 +17,6 @@ export interface Technician {
   area: string;
   city: string;
   isAvailable: boolean;
-  phone: string;
   hourlyRate: number;
   completedOrders: number;
   earnings: number;
