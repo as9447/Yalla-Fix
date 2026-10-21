@@ -234,7 +234,7 @@ export const INITIAL_ORDERS: MaintenanceOrder[] = [
     specialty: 'نجار',
     description: 'صيانة وتثبيت مفصلات دولاب غرفة الأطفال.',
     address: 'شارع النزهة، مصر الجديدة',
-    area: 'مصر الجديدة',
+    area: 'مصر القديمه',
     status: 'pending',
     statusText: 'قيد المراجعة',
     timeLabel: 'موعد محدد (غداً، 11:00 ص)',
