@@ -28,10 +28,8 @@ export interface MaintenanceOrder {
   id: string;
   code: string;
   customerName: string;
-  customerPhone: string;
   technicianId: string;
   technicianName: string;
-  technicianPhone: string;
   specialty: string;
   description: string;
   address: string;
@@ -97,7 +95,7 @@ export const INITIAL_TECHNICIANS: Technician[] = [
     area: 'المعادي',
     city: 'القاهرة',
     isAvailable: true,
-       hourlyRate: 150,
+    hourlyRate: 150,
     completedOrders: 32,
     earnings: 3850.0,
     avatarText: 'أع',
@@ -131,7 +129,6 @@ export const INITIAL_TECHNICIANS: Technician[] = [
     area: 'مصر الجديدة',
     city: 'القاهرة',
     isAvailable: true,
-    ,
     hourlyRate: 170,
     completedOrders: 48,
     earnings: 5200.0,
@@ -148,7 +145,7 @@ export const INITIAL_TECHNICIANS: Technician[] = [
     reviewCount: 53,
     area: 'شبرا',
     city: 'القاهرة',
-    isAvailable: true'
+    isAvailable: true,
     hourlyRate: 160,
     completedOrders: 61,
     earnings: 7100.0,
@@ -180,7 +177,7 @@ export const INITIAL_ORDERS: MaintenanceOrder[] = [
     code: 'REQ-103',
     customerName: 'أحمد رضوان',
     technicianId: 'tech-2',
-    technicianName: 'محمد فؤاد'
+    technicianName: 'محمد فؤاد',
     specialty: 'سباك',
     description: 'تسريب في ماسورة حوض المطبخ أسفل الرخامة.',
     address: 'شارع التسعين الشمالي، التجمع الخامس',
@@ -199,7 +196,6 @@ export const INITIAL_ORDERS: MaintenanceOrder[] = [
     id: 'req-101',
     code: 'REQ-101',
     customerName: 'أحمد رضوان',
-    customerPhone: '',
     technicianId: 'tech-1',
     technicianName: 'أحمد عبد السلام',
     specialty: 'نجار',
@@ -221,7 +217,7 @@ export const INITIAL_ORDERS: MaintenanceOrder[] = [
     code: 'REQ-102',
     customerName: 'أحمد رضوان',
     technicianId: 'tech-1',
-    technicianName: 'أحمد عبد السلام'
+    technicianName: 'أحمد عبد السلام',
     specialty: 'نجار',
     description: 'صيانة وتثبيت مفصلات دولاب غرفة الأطفال.',
     address: 'شارع النزهة، مصر الجديدة',
@@ -240,9 +236,8 @@ export const INITIAL_ORDERS: MaintenanceOrder[] = [
     id: 'req-104',
     code: 'REQ-104',
     customerName: 'أحمد رضوان',
-    customerPhone: ',
     technicianId: 'tech-3',
-    technicianName: 'كريم السيد'
+    technicianName: 'كريم السيد',
     specialty: 'كهربائي',
     description: 'تغيير لوحة القواطع الرئيسية وتركيب سبوتات ليد.',
     address: 'شارع الثورة، مصر الجديدة',
