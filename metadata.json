@@ -1,0 +1,8 @@
+{
+  "name": "دراسة الجدوى التسويقية - يلا فيكس (Yalla-Fix)",
+  "description": "دراسة جدوى تسويقية شاملة وعرض تقديمي تفاعلي لمشروع يلا فيكس Yalla-Fix لخدمات الصيانة المنزلية",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
