@@ -288,7 +288,7 @@ export const CustomerOrdersView: React.FC<CustomerOrdersViewProps> = ({
                       className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition-all cursor-pointer"
                     >
                       <CheckCircle2 className="w-4 h-4" />
-                      <span>إنهاء الصيانة واستلام الحساب ✅ ({order.cost} ج.م)</span>
+                      <span>إنهاء الصيانة ✅ )</span>
                     </button>
                   </div>
                 )}

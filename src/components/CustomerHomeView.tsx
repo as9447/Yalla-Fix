@@ -123,7 +123,7 @@ export const CustomerHomeView: React.FC<CustomerHomeViewProps> = ({
             <div className="flex flex-wrap items-center gap-2 pt-2 text-[11px] font-bold">
               <span className="px-2.5 py-1 rounded-xl bg-white/15 backdrop-blur-xs flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-300" />
-                <span>ضمان صيانة معتمد 14 يوم</span>
+                <span>ضمان صيانة معتمد 7 يوم</span>
               </span>
               <span className="px-2.5 py-1 rounded-xl bg-white/15 backdrop-blur-xs flex items-center gap-1.5">
                 <Clock className="w-3.5 h-3.5 text-sky-200" />

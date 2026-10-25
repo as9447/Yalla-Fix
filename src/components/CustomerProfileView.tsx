@@ -198,7 +198,7 @@ export const CustomerProfileView: React.FC<CustomerProfileViewProps> = ({
               فريق خدمة عملاء يلا فيكس في خدمتك على مدار الساعة في القاهرة لضمان سرعة تلبية طلبات الصيانة وحل أي شكاوى.
             </p>
             <div className="p-3 bg-slate-50 rounded-xl font-mono text-sm font-bold text-slate-800">
-              الخط الساخن: 19850 (أو واتساب: 01011223344)
+              الخط الساخن: 19*50 (أو واتساب: 01011****44)
             </div>
           </div>
         </div>
@@ -226,7 +226,7 @@ export const CustomerProfileView: React.FC<CustomerProfileViewProps> = ({
             </div>
             <div className="text-xs text-slate-600 space-y-2 leading-relaxed">
               <p>
-                <strong>1. ضمان الصيانة:</strong> جميع أعمال السباكة، النجارة، والكهرباء مشمولة بضمان لمدة 14 يوماً من تاريخ انتهاء الصيانة عبر التطبيق.
+                <strong>1. ضمان الصيانة:</strong> جميع أعمال السباكة، النجارة، والكهرباء مشمولة بضمان لمدة 7 ايام من تاريخ انتهاء الصيانة عبر التطبيق.
               </p>
               <p>
                 <strong>2. التسجيل الصوتي للجلسة:</strong> يتم تسجيل الجلسات الصوتية لتوثيق اتفاق السعر وقطع الغيار المشتراة لضمان حق العميل والصنايعي ومنع النزاعات.

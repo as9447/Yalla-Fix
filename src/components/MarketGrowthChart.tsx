@@ -26,8 +26,8 @@ interface YearMarketData {
   yearLabel: string;
   stage: string;
   marketShare: number; // Percentage
-  totalMarketMln: number; // Million EGP
-  yallaFixVolumeMln: number; // Million EGP
+  totalMarketThousand: number; // Thousand EGP
+  yallaFixVolumeThousand: number; // Thousand EGP
   completedOrdersK: number; // in Thousands
   certifiedCraftsmen: number; // Number of certified technicians
 }
@@ -38,8 +38,8 @@ const MARKET_PROJECTION_DATA: YearMarketData[] = [
     yearLabel: '2026 (السنة الأولى)',
     stage: 'الإطلاق المركز (المعادي، التجمع الخامس، مصر الجديدة)',
     marketShare: 8.5,
-    totalMarketMln: 420,
-    yallaFixVolumeMln: 35.7,
+    totalMarketThousand: 420000,
+    yallaFixVolumeThousand: 35700,
     completedOrdersK: 52,
     certifiedCraftsmen: 500,
   },
@@ -48,8 +48,8 @@ const MARKET_PROJECTION_DATA: YearMarketData[] = [
     yearLabel: '2027 (السنة الثانية)',
     stage: 'التوسع الإقليمي (الشيخ زايد، 6 أكتوبر، الجيزة والشروق)',
     marketShare: 22.0,
-    totalMarketMln: 680,
-    yallaFixVolumeMln: 149.6,
+    totalMarketThousand: 680000,
+    yallaFixVolumeThousand: 149600,
     completedOrdersK: 195,
     certifiedCraftsmen: 1850,
   },
@@ -58,8 +58,8 @@ const MARKET_PROJECTION_DATA: YearMarketData[] = [
     yearLabel: '2028 (السنة الثالثة)',
     stage: 'الريادة القومية (القاهرة الكبرى، الإسكندرية والدلتا)',
     marketShare: 38.5,
-    totalMarketMln: 1050,
-    yallaFixVolumeMln: 404.2,
+    totalMarketThousand: 1050000,
+    yallaFixVolumeThousand: 404200,
     completedOrdersK: 480,
     certifiedCraftsmen: 4300,
   },
@@ -93,12 +93,12 @@ export const MarketGrowthChart: React.FC = () => {
 
             <div className="flex items-center justify-between">
               <span className="text-slate-400">إجمالي حجم السوق المستهدف:</span>
-              <span className="font-semibold text-slate-200">{data.totalMarketMln} مليون ج.م</span>
+              <span className="font-semibold text-slate-200">{data.totalMarketThousand.toLocaleString('en-US')} ألف ج.م</span>
             </div>
 
             <div className="flex items-center justify-between">
               <span className="text-slate-400">حجم تعاملات يلا فيكس:</span>
-              <span className="font-bold text-emerald-400">{data.yallaFixVolumeMln} مليون ج.م</span>
+              <span className="font-bold text-emerald-400">{data.yallaFixVolumeThousand.toLocaleString('en-US')} ألف ج.م</span>
             </div>
 
             <div className="flex items-center justify-between">
@@ -196,7 +196,7 @@ export const MarketGrowthChart: React.FC = () => {
             إجمالي تعاملات يلا فيكس (GMV)
           </span>
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl font-black text-emerald-900">404.2 مليون ج.م</span>
+            <span className="text-2xl font-black text-emerald-900">404,200 ألف ج.م</span>
             <span className="text-xs font-bold text-emerald-600 flex items-center">
               بحلول 2028
             </span>
@@ -304,9 +304,9 @@ export const MarketGrowthChart: React.FC = () => {
                 <>
                   <YAxis
                     yAxisId="left"
-                    domain={[0, 1200]}
+                    domain={[0, 1200000]}
                     tick={{ fill: '#475569', fontSize: 12, fontWeight: 600 }}
-                    tickFormatter={(val) => `${val}M`}
+                    tickFormatter={(val) => Number(val).toLocaleString('en-US')}
                     axisLine={false}
                     tickLine={false}
                   />
@@ -318,16 +318,16 @@ export const MarketGrowthChart: React.FC = () => {
                   />
                   <Bar
                     yAxisId="left"
-                    dataKey="totalMarketMln"
-                    name="إجمالي حجم سوق الصيانة المنظمة (مليون ج.م)"
+                    dataKey="totalMarketThousand"
+                    name="إجمالي حجم سوق الصيانة المنظمة (ألف ج.م)"
                     fill="#94A3B8"
                     radius={[8, 8, 0, 0]}
                     barSize={32}
                   />
                   <Bar
                     yAxisId="left"
-                    dataKey="yallaFixVolumeMln"
-                    name="حجم تعاملات يلا فيكس (مليون ج.م)"
+                    dataKey="yallaFixVolumeThousand"
+                    name="حجم تعاملات يلا فيكس (ألف ج.م)"
                     fill="#059669"
                     radius={[8, 8, 0, 0]}
                     barSize={32}
@@ -335,7 +335,7 @@ export const MarketGrowthChart: React.FC = () => {
                   <Line
                     yAxisId="left"
                     type="monotone"
-                    dataKey="yallaFixVolumeMln"
+                    dataKey="yallaFixVolumeThousand"
                     name="منحنى نمو الإيرادات"
                     stroke="#F59E0B"
                     strokeWidth={3}
