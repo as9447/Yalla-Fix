@@ -141,7 +141,7 @@ export const TechnicianPortalView: React.FC<TechnicianPortalViewProps> = ({
             <div>
               <div className="mb-1">
                 <span className="font-bold text-slate-900 text-sm">
-                  العميل: {order.customerName} ({order.customerPhone})
+                  العميل: {order.customerName}
                 </span>
               </div>
 
