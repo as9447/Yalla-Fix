@@ -5,7 +5,6 @@ import {
   Star,
   DollarSign,
   CheckCircle2,
-  Phone,
   MapPin,
   Mic,
   Play,
@@ -140,17 +139,10 @@ export const TechnicianPortalView: React.FC<TechnicianPortalViewProps> = ({
             </div>
 
             <div>
-              <div className="flex items-center justify-between mb-1">
+              <div className="mb-1">
                 <span className="font-bold text-slate-900 text-sm">
                   العميل: {order.customerName} ({order.customerPhone})
                 </span>
-                <a
-                  href={`tel:${order.customerPhone}`}
-                  className="text-xs text-blue-600 font-bold bg-blue-50 px-2 py-1 rounded-lg flex items-center gap-1"
-                >
-                  <Phone className="w-3 h-3" />
-                  <span>اتصال</span>
-                </a>
               </div>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">

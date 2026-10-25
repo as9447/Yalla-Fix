@@ -6,7 +6,6 @@ import {
   Play,
   Pause,
   Navigation,
-  Phone,
   ShieldCheck,
   Star,
   CheckCircle2,
@@ -250,7 +249,7 @@ export const YallaFixScreensGallery: React.FC = () => {
                     </strong>
                   </div>
 
-                  <div className="flex items-center gap-2">
+                  <div>
                     <button
                       onClick={() => {
                         setIsSimulatingTracking(true);
@@ -262,14 +261,6 @@ export const YallaFixScreensGallery: React.FC = () => {
                     >
                       {isSimulatingTracking ? 'جاري وصول الفني...' : 'محاكاة وصول الفني 🛵'}
                     </button>
-
-                    <a
-                      href="tel:01012345678"
-                      className="bg-emerald-600 hover:bg-emerald-500 text-white p-2 rounded-xl text-xs font-bold transition-colors flex items-center gap-1"
-                      title="اتصال بالفني"
-                    >
-                      <Phone className="w-4 h-4" />
-                    </a>
                   </div>
                 </div>
 
