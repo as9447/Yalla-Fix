@@ -26,13 +26,8 @@ interface YearMarketData {
   yearLabel: string;
   stage: string;
   marketShare: number; // Percentage
-<<<<<<< HEAD
-  totalMarketThousand: number; // Thousand EGP
-  yallaFixVolumeThousand: number; // Thousand EGP
-=======
   totalMarketK: number; // Thousand EGP
   yallaFixVolumeK: number; // Thousand EGP
->>>>>>> 9589f70 (Display financial projections in thousands)
   completedOrdersK: number; // in Thousands
   certifiedCraftsmen: number; // Number of certified technicians
 }
@@ -43,13 +38,8 @@ const MARKET_PROJECTION_DATA: YearMarketData[] = [
     yearLabel: '2026 (السنة الأولى)',
     stage: 'الإطلاق المركز (المعادي، التجمع الخامس، مصر الجديدة)',
     marketShare: 8.5,
-<<<<<<< HEAD
-    totalMarketThousand: 420000,
-    yallaFixVolumeThousand: 35700,
-=======
     totalMarketK: 420_000,
     yallaFixVolumeK: 35_700,
->>>>>>> 9589f70 (Display financial projections in thousands)
     completedOrdersK: 52,
     certifiedCraftsmen: 500,
   },
@@ -58,13 +48,8 @@ const MARKET_PROJECTION_DATA: YearMarketData[] = [
     yearLabel: '2027 (السنة الثانية)',
     stage: 'التوسع الإقليمي (الشيخ زايد، 6 أكتوبر، الجيزة والشروق)',
     marketShare: 22.0,
-<<<<<<< HEAD
-    totalMarketThousand: 680000,
-    yallaFixVolumeThousand: 149600,
-=======
     totalMarketK: 680_000,
     yallaFixVolumeK: 149_600,
->>>>>>> 9589f70 (Display financial projections in thousands)
     completedOrdersK: 195,
     certifiedCraftsmen: 1850,
   },
@@ -73,13 +58,8 @@ const MARKET_PROJECTION_DATA: YearMarketData[] = [
     yearLabel: '2028 (السنة الثالثة)',
     stage: 'الريادة القومية (القاهرة الكبرى، الإسكندرية والدلتا)',
     marketShare: 38.5,
-<<<<<<< HEAD
-    totalMarketThousand: 1050000,
-    yallaFixVolumeThousand: 404200,
-=======
     totalMarketK: 1_050_000,
     yallaFixVolumeK: 404_200,
->>>>>>> 9589f70 (Display financial projections in thousands)
     completedOrdersK: 480,
     certifiedCraftsmen: 4300,
   },
@@ -113,20 +93,12 @@ export const MarketGrowthChart: React.FC = () => {
 
             <div className="flex items-center justify-between">
               <span className="text-slate-400">إجمالي حجم السوق المستهدف:</span>
-<<<<<<< HEAD
-              <span className="font-semibold text-slate-200">{data.totalMarketThousand.toLocaleString('en-US')} ألف ج.م</span>
-=======
               <span className="font-semibold text-slate-200">{data.totalMarketK.toLocaleString()} ألف ج.م</span>
->>>>>>> 9589f70 (Display financial projections in thousands)
             </div>
 
             <div className="flex items-center justify-between">
               <span className="text-slate-400">حجم تعاملات يلا فيكس:</span>
-<<<<<<< HEAD
-              <span className="font-bold text-emerald-400">{data.yallaFixVolumeThousand.toLocaleString('en-US')} ألف ج.م</span>
-=======
               <span className="font-bold text-emerald-400">{data.yallaFixVolumeK.toLocaleString()} ألف ج.م</span>
->>>>>>> 9589f70 (Display financial projections in thousands)
             </div>
 
             <div className="flex items-center justify-between">
@@ -332,15 +304,9 @@ export const MarketGrowthChart: React.FC = () => {
                 <>
                   <YAxis
                     yAxisId="left"
-<<<<<<< HEAD
-                    domain={[0, 1200000]}
-                    tick={{ fill: '#475569', fontSize: 12, fontWeight: 600 }}
-                    tickFormatter={(val) => Number(val).toLocaleString('en-US')}
-=======
                     domain={[0, 1_200_000]}
                     tick={{ fill: '#475569', fontSize: 12, fontWeight: 600 }}
                     tickFormatter={(val) => val.toLocaleString()}
->>>>>>> 9589f70 (Display financial projections in thousands)
                     axisLine={false}
                     tickLine={false}
                   />
@@ -352,11 +318,7 @@ export const MarketGrowthChart: React.FC = () => {
                   />
                   <Bar
                     yAxisId="left"
-<<<<<<< HEAD
-                    dataKey="totalMarketThousand"
-=======
                     dataKey="totalMarketK"
->>>>>>> 9589f70 (Display financial projections in thousands)
                     name="إجمالي حجم سوق الصيانة المنظمة (ألف ج.م)"
                     fill="#94A3B8"
                     radius={[8, 8, 0, 0]}
@@ -364,11 +326,7 @@ export const MarketGrowthChart: React.FC = () => {
                   />
                   <Bar
                     yAxisId="left"
-<<<<<<< HEAD
-                    dataKey="yallaFixVolumeThousand"
-=======
                     dataKey="yallaFixVolumeK"
->>>>>>> 9589f70 (Display financial projections in thousands)
                     name="حجم تعاملات يلا فيكس (ألف ج.م)"
                     fill="#059669"
                     radius={[8, 8, 0, 0]}
@@ -377,11 +335,7 @@ export const MarketGrowthChart: React.FC = () => {
                   <Line
                     yAxisId="left"
                     type="monotone"
-<<<<<<< HEAD
-                    dataKey="yallaFixVolumeThousand"
-=======
                     dataKey="yallaFixVolumeK"
->>>>>>> 9589f70 (Display financial projections in thousands)
                     name="منحنى نمو الإيرادات"
                     stroke="#F59E0B"
                     strokeWidth={3}
